@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-var ghpages = require('gh-pages');
 
-ghpages.publish('dist', {
-  branch: 'master',
-  repo: 'https://github.com/Ardonam/ardonam.github.io.git'
-});
 
 class App extends Component {
   render() {
