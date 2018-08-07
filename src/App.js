@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import DrawRect from './components/DrawRect'
-import bg from './images/bg.png';
+import IconCircle from './icons/IconCircle';
+import navBar from './images/navBar.png';
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,13 +12,13 @@ class App extends Component {
       <div className="App-background">
 
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+        {/*  <img src={logo} className="App-logo" alt="logo" /> */}
         </header>
-        <DrawRect />
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="App-bar-div">
+          <img src={navBar} className="App-bar" alt="logo" />
+          <IconCircle />
+        </div>
+        <h1 className="App-title">ERIC NORMAN</h1>
       </div>
     );
   }
