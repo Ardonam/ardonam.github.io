@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Raleway'; /*a name to be used later*/
+    src: url('fonts/Raleway/Raleway-Thin.ttf'); /*URL to font*/
+}
+
 .App {
   text-align: center;
 }
@@ -33,7 +38,7 @@
   position: absolute;
   top: 40px;
   left: 25px;
-  fill: #777;
+  fill: #fff;
   width: 24px;
   cursor: pointer;
   height: 24px;
@@ -57,8 +62,9 @@
 }
 
 .App-title {
+  font-family: 'Raleway';
   color: white;
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
   position: absolute;
   right: 10%;
 }
