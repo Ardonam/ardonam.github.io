@@ -7,36 +7,38 @@
   text-align: center;
 }
 
-.App-background {
+/* .App-background {
   background-image: url(images/bg.png);
   background-attachment: fixed;
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center top;
   text-align: center;
   min-height:100vh;
-}
+} */
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 .App-bar-div {
-  position: relative;
-  top: 0px;
+  position: fixed;
+  top:50%;
   left: 5%;
   width: 72px;
   height: 388px;
+  float: left;
+  z-index: 5;
 }
 .App-bar {
   position: relative;
-  top: 0px;
+  top: -50%;
   left: 0px;
 }
 
 .App-nav-icon {
   position: absolute;
-  top: 40px;
+  top: -155px;
   left: 25px;
   fill: #fff;
   width: 24px;
@@ -64,9 +66,26 @@
 .App-title {
   font-family: 'Raleway';
   color: white;
-  /* font-size: 1.5em; */
-  position: absolute;
-  right: 10%;
+  font-size: 4em;
+
+  position: relative;
+  float: center;
+  top:160px;
+  margin: 0px;
+  /* right: 10%; */
+}
+
+.App-title2 {
+  font-family: 'Raleway';
+  color: white;
+  font-size: 4em;
+  position: relative;
+  /* right: 10%; */
+  float: right;
+  top:485px ;
+  right:5%;
+  font-size:2em;
+  /* bottom: 5%; */
 }
 
 .App-intro {
