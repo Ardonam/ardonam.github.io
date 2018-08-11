@@ -6,15 +6,23 @@ import IconMusic from './icons/IconMusic';
 import IconInfo from './icons/IconInfo';
 import navBar from './images/navBar.png';
 import logo from './logo.svg';
+import Code from './Code';
+import './index.css';
 import './App.css';
 
 
 class App extends Component {
+  comp() {
+    // document.body.classList.add('blur');
+  }
+
   render() {
     return (
+      <div>
+      <div className="bg">
 
-      <div className="App-background">
-
+      </div>
+        <div>
 
         <div className="App-bar-div">
           <img src={navBar} className="App-bar" alt="logo" />
@@ -24,7 +32,7 @@ class App extends Component {
           <IconMusic style={{top: '40px'}}/>
           <IconInfo style={{top: '105px'}}/>
         </div>
-
+        {this.comp()}
         {/*<h1 className="App-title">Wellocme to my portfolio</h1>*/}
         <h1 className="App-title">ERIC NORMAN</h1>
         <h1 className="App-title2" style={{float:'left',top:'130px',left:'50%'}}>Software Engineer</h1>
@@ -46,7 +54,10 @@ class App extends Component {
         User experience
         Innovation
 */}
+        <Code />
+        </div>
       </div>
+
     );
   }
 }
