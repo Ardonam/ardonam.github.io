@@ -20,24 +20,26 @@ class App extends Component {
     return (
       <div>
       <div className="bg">
+      </div >
 
+      <div className="App-bar-div">
+        <img src={navBar} className="App-bar" alt="logo" />
+        <IconCircle />
+        <IconCode style={{top: '-90px'}}/>
+        <IconAbout style={{top: '-25px'}}/>
+        <IconMusic style={{top: '40px'}}/>
+        <IconInfo style={{top: '105px'}}/>
       </div>
-        <div>
 
-        <div className="App-bar-div">
-          <img src={navBar} className="App-bar" alt="logo" />
-          <IconCircle />
-          <IconCode style={{top: '-90px'}}/>
-          <IconAbout style={{top: '-25px'}}/>
-          <IconMusic style={{top: '40px'}}/>
-          <IconInfo style={{top: '105px'}}/>
-        </div>
-        {this.comp()}
+        <div className="App-home">
+
+
+
         {/*<h1 className="App-title">Wellocme to my portfolio</h1>*/}
         <h1 className="App-title">ERIC NORMAN</h1>
-        <h1 className="App-title2" style={{float:'left',top:'130px',left:'50%'}}>Software Engineer</h1>
-        <h1 className="App-title2" >Portfolio</h1>
-        <h1 className="App-title" style={{top:'1000px'}}>Next page</h1>
+        <h1 className="App-title2" style={{left:"50%"}}>Software Engineer</h1>
+        <h1 className="App-title2" style={{position: "relative",float:"right",right:"5%",marginTop:"55vh"}}>Portfolio</h1>
+
 {/*
         Find out more about me at my website:
         http://www.adamhartwig.co.uk
@@ -54,8 +56,9 @@ class App extends Component {
         User experience
         Innovation
 */}
-        <Code />
         </div>
+        <Code />
+
       </div>
 
     );

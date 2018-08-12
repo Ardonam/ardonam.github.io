@@ -1,0 +1,24 @@
+.Code-container {
+    position: relative;
+
+}
+
+.Code-title {
+  font-family: 'Raleway';
+  color: white;
+
+  font-size: 3em;
+
+  /* position: 20%, 20%; */
+  /* float: center; */
+  /* top:160px; */
+  margin-top: 150px;
+  margin-bottom: 40;
+  /* right: 10%; */
+  /* opacity: 1; */
+}
+
+.Code-preview {
+  max-width: 400px;
+  padding: 20px;
+}

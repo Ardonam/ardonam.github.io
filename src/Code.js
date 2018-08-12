@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
-import logo from './logo.svg';
+import graphics from './images/graphicsScreenShot.png';
+import litesys from './images/ls.png';
+import mngo from './images/mngo.png';
+import kpc3 from './images/lsk.png';
 import './App.css';
 import './Code.css';
 
@@ -9,13 +12,17 @@ class Code extends Component {
   render() {
     return (
 
-      <div className="App-background">
+      <div className="Code-container">
 
 
 
         {/*<h1 className="App-title">Wellocme to my portfolio</h1>*/}
-        
-        <h1 className="App-title" style={{top:'1000px'}}>Next page</h1>
+
+        <h1 className="Code-title" >PROJECTS</h1>
+        <img src={mngo} className="Code-preview"  alt="logo" />
+        <img src={litesys} className="Code-preview"  alt="logo" />
+        <img src={kpc3} className="Code-preview"  alt="logo" />
+        <img src={graphics} className="Code-preview"  alt="logo" />
 {/*
         Find out more about me at my website:
         http://www.adamhartwig.co.uk

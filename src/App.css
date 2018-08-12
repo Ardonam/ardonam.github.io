@@ -18,11 +18,19 @@
 
 }
 
+.App-home {
+overflow: hidden;
+  position: relative;
+  float: center;
+  width:inherit;
+  height: auto;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 .App-bar-div {
+  position: relative;
   position: fixed;
   top:50%;
   left: 2%;
@@ -69,10 +77,11 @@
   color: white;
   font-size: 4em;
 
-  position: relative;
-  float: center;
-  top:160px;
-  margin: 0px;
+  /* position: 20%, 20%; */
+  /* float: center; */
+  /* top:160px; */
+  margin-top: 150px;
+  margin-bottom: 0;
   /* right: 10%; */
   /* opacity: 1; */
 
@@ -85,12 +94,13 @@
 .App-title2 {
   font-family: 'Raleway';
   color: white;
-  font-size: 4em;
-  position: relative;
+
+  position: absolute;
   /* right: 10%; */
-  float: right;
-  top:485px ;
-  right:5%;
+  margin-top: 0px;
+  /* float: left; */
+  /* top:485px ; */
+
   font-size:2em;
   /* bottom: 5%; */
 }
