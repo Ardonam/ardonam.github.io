@@ -2,6 +2,10 @@
     font-family: 'Raleway'; /*a name to be used later*/
     src: url('fonts/Raleway/Raleway-Thin.ttf'); /*URL to font*/
 }
+@font-face {
+    font-family: 'Open Sans'; /*a name to be used later*/
+    src: url('fonts/Open_Sans/OpenSans-Regular.ttf'); /*URL to font*/
+}
 
 body {
   margin: 0;
@@ -18,6 +22,13 @@ body {
   background-position: center top; */
   text-align: center;
   /* min-height:100vh; */
+}
+
+h2 {
+
+  color: white;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .bg {
@@ -60,7 +71,7 @@ animation: bgBlur 4s forwards;
     -moz-filter: blur(10px);
     -o-filter: blur(10px);
     -ms-filter: blur(10px);
-    filter: brightness(70%)blur(5px);
+    /* filter: brightness(70%)blur(5px); */
 
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import ProjectInfo from './components/ProjectInfo';
 import graphics from './images/graphicsScreenShot.png';
 import litesys from './images/ls.png';
 import mngo from './images/mngo.png';
@@ -9,6 +9,47 @@ import './Code.css';
 
 
 class Code extends Component {
+  constructor() {
+    super();
+    this.state = {
+      logo: "nandos_logo",
+      name: "Nando's",
+      bio: 'Best food in the west cause we make our food with the finest of tooth brushes.',
+      followers: 200,
+      projects:[
+        {
+          image: "mngo",
+          title: "Mngo",
+          tech: "React.js, Node.js",
+          likes: 4
+        },
+        {
+          image: "ls",
+          title: "LiteSys Inc.",
+          tech: "Javascript",
+          likes: 4
+        },
+        {
+          image: "lsk",
+          title: "Touchscreen handheld controller",
+          tech: "Custom Linux 4.4 kernel, Python",
+          likes: 2
+        },
+        {
+          image: "myworld",
+          title: "3D interactive desktop application",
+          tech: "OpenGL, C++",
+          likes: 4
+        }
+      ]
+
+    };
+    this.handleFollowersChange = this.handleFollowersChange.bind(this);
+  }
+
+  handleFollowersChange(newFollowing) {
+    this.setState({followers: newFollowing});
+  }
   render() {
     return (
 
@@ -19,10 +60,12 @@ class Code extends Component {
         {/*<h1 className="App-title">Wellocme to my portfolio</h1>*/}
 
         <h1 className="Code-title" >PROJECTS</h1>
-        <img src={mngo} className="Code-preview"  alt="logo" />
-        <img src={litesys} className="Code-preview"  alt="logo" />
-        <img src={kpc3} className="Code-preview"  alt="logo" />
-        <img src={graphics} className="Code-preview"  alt="logo" />
+        {this.state.projects.map((pInfo, index) => (
+          <ProjectInfo image={pInfo.image} title={pInfo.title} tech={pInfo.tech}/>
+
+        ))}
+
+
 {/*
         Find out more about me at my website:
         http://www.adamhartwig.co.uk
