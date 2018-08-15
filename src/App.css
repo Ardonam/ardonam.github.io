@@ -60,6 +60,10 @@ overflow: hidden;
   animation: fillChange .5s forwards;
 }
 
+.App-nav-icon.click {
+  fill: #00D0FE;
+}
+
 @keyframes fillChange {
   100% {
     fill: #FFDB79;

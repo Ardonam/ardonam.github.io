@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import graphics from '../images/graphicsScreenShot.png';
+import graphics from '../images/myworld.png';
 import litesys from '../images/ls.png';
 import mngo from '../images/mngo.png';
 import kpc3 from '../images/lsk.png';

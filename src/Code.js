@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProjectInfo from './components/ProjectInfo';
-import graphics from './images/graphicsScreenShot.png';
+import graphics from './images/myworld.png';
 import litesys from './images/ls.png';
 import mngo from './images/mngo.png';
 import kpc3 from './images/lsk.png';
@@ -53,13 +53,14 @@ class Code extends Component {
   render() {
     return (
 
-      <div className="Code-container">
+      <div  className="Code-container">
 
 
 
         {/*<h1 className="App-title">Wellocme to my portfolio</h1>*/}
 
-        <h1 className="Code-title" >PROJECTS</h1>
+        <h1 id={this.props.id} className="Code-title" >PROJECTS</h1>
+        
         {this.state.projects.map((pInfo, index) => (
           <ProjectInfo image={pInfo.image} title={pInfo.title} tech={pInfo.tech}/>
 

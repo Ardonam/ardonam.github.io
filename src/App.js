@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Button } from 'react';
 import IconCircle from './icons/IconCircle';
 import IconCode from './icons/IconCode';
 import IconAbout from './icons/IconAbout';
@@ -12,9 +12,78 @@ import './App.css';
 
 
 class App extends Component {
-  comp() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isHome: false,
+      isPortfolio: false
+    };
+
+
+    // This binding is necessary to make `this` work in the callback
+    this.navHome = this.navHome.bind(this);
+    this.navHome = this.navHome.bind(this);
+  }
+
+  navHome() {
+      document.getElementById("home").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+      document.getElementById("homeButton").classList.add("click")
+      document.getElementById("portButton").classList.remove("click")
+      document.getElementById("aboutButton").classList.remove("click")
+      document.getElementById("musicButton").classList.remove("click")
+      document.getElementById("infoButton").classList.remove("click")
+
+  }
+  navPortfolio() {
+      document.getElementById("portfolio").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+      document.getElementById("portButton").classList.add("click")
+      document.getElementById("homeButton").classList.remove("click")
+      document.getElementById("aboutButton").classList.remove("click")
+      document.getElementById("musicButton").classList.remove("click")
+      document.getElementById("infoButton").classList.remove("click")
+
+  }
+  navAbout() {
+      document.getElementById("portfolio").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+      document.getElementById("aboutButton").classList.add("click")
+      document.getElementById("portButton").classList.remove("click")
+      document.getElementById("homeButton").classList.remove("click")
+      document.getElementById("musicButton").classList.remove("click")
+      document.getElementById("infoButton").classList.remove("click")
+
+  }
+  navMusic() {
+      document.getElementById("portfolio").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+      document.getElementById("musicButton").classList.add("click")
+      document.getElementById("portButton").classList.remove("click")
+      document.getElementById("aboutButton").classList.remove("click")
+      document.getElementById("homeButton").classList.remove("click")
+      document.getElementById("infoButton").classList.remove("click")
+
+  }
+  navInfo() {
+      document.getElementById("portfolio").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+      document.getElementById("infoButton").classList.add("click")
+      document.getElementById("portButton").classList.remove("click")
+      document.getElementById("aboutButton").classList.remove("click")
+      document.getElementById("musicButton").classList.remove("click")
+      document.getElementById("homeButton").classList.remove("click")
+
+  }
+
+  componentDidMount() {
+
+    if (this.props.location == "portfolio"){
+      // document.getElementById("portfolio").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+      this.navPortfolio();
+    }
+    else  {
+      this.navHome();
+    }
+
     // document.body.classList.add('blur');
   }
+
 
   render() {
     return (
@@ -22,16 +91,19 @@ class App extends Component {
       <div className="bg">
       </div >
 
-      <div className="App-bar-div">
+      <div  className="App-bar-div">
         <img src={navBar} className="App-bar" alt="logo" />
-        <IconCircle />
-        <IconCode style={{top: '-90px'}}/>
-        <IconAbout style={{top: '-25px'}}/>
-        <IconMusic style={{top: '40px'}}/>
-        <IconInfo style={{top: '105px'}}/>
+
+
+
+        <IconCircle id="homeButton" onClick={this.navHome}/>
+        <IconCode id="portButton" style={{top: '-90px'}} onClick={this.navPortfolio} />
+        <IconAbout id="aboutButton" style={{top: '-25px'}} onClick={this.navAbout}/>
+        <IconMusic id="musicButton" style={{top: '40px'}} onClick={this.navMusic}/>
+        <IconInfo id="infoButton" style={{top: '105px'}} onClick={this.navInfo}/>
       </div>
 
-        <div className="App-home">
+        <div id="home" className="App-home">
 
 
 
@@ -57,10 +129,11 @@ class App extends Component {
         Innovation
 */}
         </div>
-        <Code />
+
+
+        <Code id="portfolio"/>
 
       </div>
-
     );
   }
 }
