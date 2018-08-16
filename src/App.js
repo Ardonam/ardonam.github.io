@@ -7,6 +7,7 @@ import IconInfo from './icons/IconInfo';
 import navBar from './images/navBar.png';
 import logo from './logo.svg';
 import Code from './Code';
+import About from './About';
 import './index.css';
 import './App.css';
 
@@ -27,20 +28,20 @@ class App extends Component {
 
   navHome() {
       document.getElementById("home").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
-      document.getElementById("homeButton").classList.add("click")
-      document.getElementById("portButton").classList.remove("click")
-      document.getElementById("aboutButton").classList.remove("click")
-      document.getElementById("musicButton").classList.remove("click")
-      document.getElementById("infoButton").classList.remove("click")
+      // document.getElementById("homeButton").classList.add("click")
+      // document.getElementById("portButton").classList.remove("click")
+      // document.getElementById("aboutButton").classList.remove("click")
+      // document.getElementById("musicButton").classList.remove("click")
+      // document.getElementById("infoButton").classList.remove("click")
 
   }
   navPortfolio() {
       document.getElementById("portfolio").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
-      document.getElementById("portButton").classList.add("click")
-      document.getElementById("homeButton").classList.remove("click")
-      document.getElementById("aboutButton").classList.remove("click")
-      document.getElementById("musicButton").classList.remove("click")
-      document.getElementById("infoButton").classList.remove("click")
+      // document.getElementById("portButton").classList.add("click")
+      // document.getElementById("homeButton").classList.remove("click")
+      // document.getElementById("aboutButton").classList.remove("click")
+      // document.getElementById("musicButton").classList.remove("click")
+      // document.getElementById("infoButton").classList.remove("click")
 
   }
   navAbout() {
@@ -80,10 +81,40 @@ class App extends Component {
     else  {
       this.navHome();
     }
+    window.addEventListener('scroll', this.handleScroll);
 
     // document.body.classList.add('blur');
   }
 
+  //
+  // componentWillUnmount: function() {
+  //     window.removeEventListener('scroll', this.handleScroll);
+  // },
+  //
+  handleScroll(){
+      let scrollTop = document.documentElement.scrollTop,
+          itemTranslate = Math.min(0, scrollTop/3 - 60);
+      let myPos = document.getElementById("portfolio").getBoundingClientRect();
+      if(myPos.y >0){
+        document.getElementById("portButton").classList.remove("click")
+        document.getElementById("homeButton").classList.add("click")
+        document.getElementById("aboutButton").classList.remove("click")
+        document.getElementById("musicButton").classList.remove("click")
+        document.getElementById("infoButton").classList.remove("click")
+      }
+      else if(myPos.y <0){
+        document.getElementById("portButton").classList.add("click")
+        document.getElementById("homeButton").classList.remove("click")
+        document.getElementById("aboutButton").classList.remove("click")
+        document.getElementById("musicButton").classList.remove("click")
+        document.getElementById("infoButton").classList.remove("click")
+        document.getElementById("infoButton").listStyle.add({color:"white"});
+      }
+      console.log(myPos.y);
+      console.log(scrollTop);
+      console.log("hello");
+
+  }
 
   render() {
     return (
@@ -132,7 +163,7 @@ class App extends Component {
 
 
         <Code id="portfolio"/>
-
+        <About id="about"/>
       </div>
     );
   }

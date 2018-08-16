@@ -54,7 +54,7 @@ h2 {
   background-position: center top;
   text-align: center;
   min-height:100vh;
-animation: bgBlur 4s forwards;
+/* animation: bgBlur 4s forwards; */
 }
 
 .bg.blur {
