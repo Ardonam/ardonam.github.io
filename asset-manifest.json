@@ -1,7 +1,19 @@
 {
-  "main.css": "static/css/main.c17080f1.css",
-  "main.css.map": "static/css/main.c17080f1.css.map",
-  "main.js": "static/js/main.a0b7d8d3.js",
-  "main.js.map": "static/js/main.a0b7d8d3.js.map",
-  "static/media/logo.svg": "static/media/logo.5d5d9eef.svg"
+  "main.css": "static/css/main.5c0c266a.css",
+  "main.css.map": "static/css/main.5c0c266a.css.map",
+  "main.js": "static/js/main.e47094c3.js",
+  "main.js.map": "static/js/main.e47094c3.js.map",
+  "static/media/OpenSans-Regular.ttf": "static/media/OpenSans-Regular.d7d5d458.ttf",
+  "static/media/Raleway-Thin.ttf": "static/media/Raleway-Thin.9f5eec4e.ttf",
+  "static/media/bg.png": "static/media/bg.a26ce5b0.png",
+  "static/media/bg3.png": "static/media/bg3.f0a4d79d.png",
+  "static/media/bg4.png": "static/media/bg4.f0a4d79d.png",
+  "static/media/bg5.png": "static/media/bg5.f0a4d79d.png",
+  "static/media/bg7.png": "static/media/bg7.6b04c4b8.png",
+  "static/media/logo.svg": "static/media/logo.5d5d9eef.svg",
+  "static/media/ls.png": "static/media/ls.32e8c154.png",
+  "static/media/lsk.png": "static/media/lsk.f23ca6c2.png",
+  "static/media/mngo.png": "static/media/mngo.fbee97a7.png",
+  "static/media/mngo2.png": "static/media/mngo2.704d15ec.png",
+  "static/media/myworld.png": "static/media/myworld.aefb18d9.png"
 }
