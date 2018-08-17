@@ -23,9 +23,17 @@ class Main extends React.Component {
           <Route exact path='/portfolio' render={(props) => (
             <App location={"portfolio"} />
           )}/>
+          <Route exact path='/about' render={(props) => (
+            <App location={"about"} />
+          )}/>
+          <Route exact path='/hobbies' render={(props) => (
+            <App location={"hobbies"} />
+          )}/>
+          <Route exact path='/info' render={(props) => (
+            <App location={"info"} />
+          )}/>
 
-          {/* <Route path='/restaurant' component={Restaurant} />
-           <Route path='/contact' component={Home} /> */}
+
         </Switch>
 
       </BrowserRouter>
@@ -42,11 +50,17 @@ const Roster = () => (
   <Switch>
     <Route exact path='/' component={App} />
     <Route exact path='/portfolio' render={(props) => (
-      <App isAuthed={true} />
+      <App location={"portfolio"} />
+    )}/>
+    <Route exact path='/about' render={(props) => (
+      <App location={"about"} />
+    )}/>
+    <Route exact path='/hobbies' render={(props) => (
+      <App location={"hobbies"} />
+    )}/>
+    <Route exact path='/information' render={(props) => (
+      <App location={"info"} />
+    )}/>
 
-        )}
-          />
-    {/* <Route path='/restaurant' component={Restaurant} />
-     <Route path='/contact' component={Home} /> */}
   </Switch>
 )
