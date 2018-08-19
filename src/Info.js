@@ -20,7 +20,9 @@ class Info extends Component {
         {/*<h1 className="App-title">Wellocme to my portfolio</h1>*/}
 
         <h1 id={this.props.id} className="Info-title" >INFORMATION</h1>
-
+        <h2 className="" ><br/>For inqueries please contatct me at</h2>
+        <h2 className="" ><br/>(442)-777-3812</h2>
+        <h2 className="" ><br/>emnormanleon@gmail.com<br/><br/></h2>
 
 
 

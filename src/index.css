@@ -32,6 +32,7 @@ h2 {
 }
 
 .bg {
+
   margin: 0;
   padding: 0;
   z-index: 0;
@@ -54,15 +55,27 @@ h2 {
   background-position: center top;
   text-align: center;
   min-height:100vh;
-/* animation: bgBlur 4s forwards; */
+
 }
 
 .bg.blur {
-  -webkit-animation: bgBlur 6s forwards;
-  -moz-animation: bgBlur 6s forwards;
-  -ms-animation: bgBlur 6s forwards;
-  -o-animation: bgBlur 6s forwards;
-  animation: bgBlur 6s forwards;
+  -webkit-animation: bgBlur 3s both;
+  -moz-animation: bgBlur 3s both;
+  -ms-animation: bgBlur 3s both;
+  -o-animation: bgBlur 3s both;
+  animation: bgBlur 3s both;
+}
+
+.bg.noBlur {
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  -webkit-animation: nonBlur 3s both;
+  -moz-animation: nonBlur 3s both;
+  -ms-animation: nonBlur 3s both;
+  -o-animation: nonBlur 3s both;
+  animation: nonBlur 3s both;
 }
 
 @keyframes bgBlur {
@@ -71,6 +84,17 @@ h2 {
     -moz-filter: blur(10px);
     -o-filter: blur(10px);
     -ms-filter: blur(10px);
+    /* filter: brightness(70%)blur(5px); */
+
+  }
+}
+
+@keyframes nonBlur {
+  100% {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
     /* filter: brightness(70%)blur(5px); */
 
   }

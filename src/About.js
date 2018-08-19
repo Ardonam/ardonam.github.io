@@ -20,9 +20,12 @@ class About extends Component {
         {/*<h1 className="App-title">Wellocme to my portfolio</h1>*/}
 
         <h1 id={this.props.id} className="About-title" >ABOUT</h1>
-
-
-
+        <h2 className="" >From costomizing linux for embeded devices to deloying javascript sites to the web, I enjoy a hard challenge and am passionate about makeing a good expiriance for the user. </h2>
+        <img src={require(`./images/meAndSon.png`)} className="Project-preview"  alt="Me and Son" />
+        <h2 className="" >Studied Computer Sience and Arts in <br/> Music at Montana State University</h2>
+        <h2 className="" >Languages and technologies in order of familiarity: <br/>
+                        Java, Python, Javascript, HTML, CSS, C, C++ <br/>
+                        Git, React.js, Yocto, Android SDK, MongoDB, Node.js, OpenGL, Docker</h2>
 
 {/*
         Find out more about me at my website:

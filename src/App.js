@@ -33,48 +33,18 @@ class App extends Component {
 
   navHome() {
       document.getElementById("home").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
-      // document.getElementById("homeButton").classList.add("click")
-      // document.getElementById("portButton").classList.remove("click")
-      // document.getElementById("aboutButton").classList.remove("click")
-      // document.getElementById("musicButton").classList.remove("click")
-      // document.getElementById("infoButton").classList.remove("click")
-
   }
   navPortfolio() {
       document.getElementById("portfolio").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
-      // document.getElementById("portButton").classList.add("click")
-      // document.getElementById("homeButton").classList.remove("click")
-      // document.getElementById("aboutButton").classList.remove("click")
-      // document.getElementById("musicButton").classList.remove("click")
-      // document.getElementById("infoButton").classList.remove("click")
-
   }
   navAbout() {
       document.getElementById("about").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
-      // document.getElementById("aboutButton").classList.add("click")
-      // document.getElementById("portButton").classList.remove("click")
-      // document.getElementById("homeButton").classList.remove("click")
-      // document.getElementById("musicButton").classList.remove("click")
-      // document.getElementById("infoButton").classList.remove("click")
-
   }
   navMusic() {
       document.getElementById("hobbies").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
-      // document.getElementById("musicButton").classList.add("click")
-      // document.getElementById("portButton").classList.remove("click")
-      // document.getElementById("aboutButton").classList.remove("click")
-      // document.getElementById("homeButton").classList.remove("click")
-      // document.getElementById("infoButton").classList.remove("click")
-
   }
   navInfo() {
       document.getElementById("info").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
-      // document.getElementById("infoButton").classList.add("click")
-      // document.getElementById("portButton").classList.remove("click")
-      // document.getElementById("aboutButton").classList.remove("click")
-      // document.getElementById("musicButton").classList.remove("click")
-      // document.getElementById("homeButton").classList.remove("click")
-
   }
 
   componentDidMount() {
@@ -106,58 +76,69 @@ class App extends Component {
   // },
   //
   handleScroll(){
-      let scrollTop = document.documentElement.scrollTop,
-          itemTranslate = Math.min(0, scrollTop/3 - 60);
+      let height = document.documentElement.clientHeight;
+          // itemTranslate = Math.min(0, scrollTop/3 - 60);
       let portPos = document.getElementById("portfolio").getBoundingClientRect();
       let aboutPos = document.getElementById("about").getBoundingClientRect();
       let hobbiesPos = document.getElementById("hobbies").getBoundingClientRect();
       let infoPos = document.getElementById("info").getBoundingClientRect();
-      if(portPos.y >0){
+      let hp = (height/2);  //halfway point
+
+      if(portPos.y >hp){
+
+          document.getElementById("bg").classList.replace( "blur", "noBlur" )
+
+      }
+      else {
+        if(document.getElementById("bg").classList.contains( "noBlur")){
+          document.getElementById("bg").classList.replace( "noBlur", "blur" )
+        }
+        else {
+          document.getElementById("bg").classList.add( "blur")
+        }
+      }
+      if(portPos.y >hp){
         document.getElementById("portButton").classList.remove("click")
         document.getElementById("homeButton").classList.add("click")
         document.getElementById("aboutButton").classList.remove("click")
         document.getElementById("musicButton").classList.remove("click")
         document.getElementById("infoButton").classList.remove("click")
-        document.getElementById("bg").classList.remove("blur")
+
       }
-      else if(portPos.y <0 && aboutPos.y  > 0 && hobbiesPos.y  > 0 && infoPos.y > 0){
+      else if(portPos.y <hp && aboutPos.y  > hp && hobbiesPos.y  > hp && infoPos.y > hp){
         document.getElementById("portButton").classList.add("click")
         document.getElementById("homeButton").classList.remove("click")
         document.getElementById("aboutButton").classList.remove("click")
         document.getElementById("musicButton").classList.remove("click")
         document.getElementById("infoButton").classList.remove("click")
-        document.getElementById("bg").classList.add("blur")
-        // document.getElementById("infoButton").listStyle.add({color:"white"});
+
       }
-      else if(portPos.y <0 && aboutPos.y  < 0 && hobbiesPos.y  > 0 && infoPos.y > 0){
+      else if(portPos.y <hp && aboutPos.y  < hp && hobbiesPos.y  > hp && infoPos.y > hp){
         document.getElementById("aboutButton").classList.add("click")
         document.getElementById("portButton").classList.remove("click")
         document.getElementById("homeButton").classList.remove("click")
         document.getElementById("musicButton").classList.remove("click")
         document.getElementById("infoButton").classList.remove("click")
-        document.getElementById("bg").classList.add("blur")
-        // document.getElementById("infoButton").listStyle.add({color:"white"});
+
       }
-      else if(portPos.y <0 && aboutPos.y  < 0 && hobbiesPos.y  < 0 && infoPos.y > 0){
+      else if(portPos.y <hp && aboutPos.y  < hp && hobbiesPos.y  < hp && infoPos.y > hp){
         document.getElementById("musicButton").classList.add("click")
         document.getElementById("portButton").classList.remove("click")
         document.getElementById("aboutButton").classList.remove("click")
         document.getElementById("homeButton").classList.remove("click")
         document.getElementById("infoButton").classList.remove("click")
-        document.getElementById("bg").classList.add("blur")
-        // document.getElementById("infoButton").listStyle.add({color:"white"});
+
       }
-      else if(portPos.y <0 && aboutPos.y  < 0 && hobbiesPos.y  < 0 && infoPos.y < 0){
+      else if(portPos.y <hp && aboutPos.y  < hp && hobbiesPos.y  < hp && infoPos.y < hp){
         document.getElementById("infoButton").classList.add("click")
         document.getElementById("portButton").classList.remove("click")
         document.getElementById("aboutButton").classList.remove("click")
         document.getElementById("musicButton").classList.remove("click")
         document.getElementById("homeButton").classList.remove("click")
-        document.getElementById("bg").classList.add("blur")
-        // document.getElementById("infoButton").listStyle.add({color:"white"});
+
       }
-      // console.log(myPos.y);
-      console.log(scrollTop);
+      console.log(infoPos);
+      console.log(hp);
       console.log("hello");
 
   }
@@ -174,9 +155,9 @@ class App extends Component {
 
 
         <IconCircle id="homeButton" onClick={this.navHome}/>
-        <IconCode id="portButton" style={{top: '-90px'}} onClick={this.navPortfolio} />
-        <IconAbout id="aboutButton" style={{top: '-25px'}} onClick={this.navAbout}/>
-        <IconMusic id="musicButton" style={{top: '40px'}} onClick={this.navMusic}/>
+        <IconCode id="portButton" style={{top: '-105px'}} onClick={this.navPortfolio} />
+        <IconAbout id="aboutButton" style={{top: '-35px'}} onClick={this.navAbout}/>
+        <IconMusic id="musicButton" style={{top: '35px'}} onClick={this.navMusic}/>
         <IconInfo id="infoButton" style={{top: '105px'}} onClick={this.navInfo}/>
       </div>
 

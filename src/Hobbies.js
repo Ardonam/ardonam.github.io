@@ -4,12 +4,16 @@ import graphics from './images/myworld.png';
 import litesys from './images/ls.png';
 import mngo from './images/mngo.png';
 import kpc3 from './images/lsk.png';
+import YouTube from 'react-youtube';
 import './App.css';
 import './Hobbies.css';
 
 
 class Hobbies extends Component {
-
+  _onReady(event) {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
+  }
   render() {
     return (
 
@@ -20,9 +24,19 @@ class Hobbies extends Component {
         {/*<h1 className="App-title">Wellocme to my portfolio</h1>*/}
 
         <h1 id={this.props.id} className="Hobbies-title" >HOBBIES</h1>
-
-
-
+        <h2 className="" >Member of the Montata State University Symphoney Orchestra for thee years</h2>
+        <img src={require(`./images/msu.jpg`)} className="Hobbies-pic-container"  alt="Symphoney orchestra" />
+        <h2 className="" ><br/>Most resent work</h2>
+        <YouTube
+          videoId="VJkl671jbds"
+          opts={{
+              height: '390',
+                width: '640',
+                playerVars: { // https://developers.google.com/youtube/player_parameters
+                    autoplay: 1
+                  }}}
+          onReady={this._onReady}
+        />
 
 {/*
         Find out more about me at my website:

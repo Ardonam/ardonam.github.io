@@ -47,12 +47,13 @@ overflow: hidden;
 
 .App-nav-icon {
   position: absolute;
-  top: -155px;
-  left: 25px;
+  top: -165px;
+  left: 10px;
   fill: #fff;
   width: 24px;
   cursor: pointer;
   height: 24px;
+  padding: 15px;
   /* animation: fillChange 1s infinite ease both; */
 }
 
