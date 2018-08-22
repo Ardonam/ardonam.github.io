@@ -24,19 +24,19 @@ class Hobbies extends Component {
         {/*<h1 className="App-title">Wellocme to my portfolio</h1>*/}
 
         <h1 id={this.props.id} className="Hobbies-title" >HOBBIES</h1>
+        <div className="Hobbies-pic-container">
         <h2 className="" >Member of the Montata State University Symphoney Orchestra for thee years</h2>
-        <img src={require(`./images/msu.jpg`)} className="Hobbies-pic-container"  alt="Symphoney orchestra" />
+        <img src={require(`./images/msu.jpg`)} className="Hobbies-pic"  alt="Symphoney orchestra" />
+        </div>
         <h2 className="" ><br/>Most resent work</h2>
+        <div className="Hobbies-pic-container">
         <YouTube
           videoId="VJkl671jbds"
-          opts={{
-              height: '390',
-                width: '640',
-                playerVars: { // https://developers.google.com/youtube/player_parameters
-                    autoplay: 1
-                  }}}
+
+          className="Hobbies-pic"
           onReady={this._onReady}
         />
+        </div>
 
 {/*
         Find out more about me at my website:

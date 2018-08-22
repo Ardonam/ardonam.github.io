@@ -8,6 +8,28 @@ import './ProjectInfo.css'
 
 
 class ProjectInfo extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      detailClass: "Project-details",
+      previewClass: "Project-preview"
+    };
+
+
+    // This binding is necessary to make `this` work in the callback
+    this.showDetail = this.showDetail.bind(this);
+  }
+  showDetail() {
+    if(this.state.detailClass == "Project-details"){
+      this.setState({ detailClass: "Project-details show" });
+      this.setState({ previewClass: "Project-preview hide" });
+    }
+    else{
+      this.setState({ detailClass: "Project-details" });
+      this.setState({ previewClass: "Project-preview" });
+    }
+
+  }
   render() {
     return (
 
@@ -15,7 +37,8 @@ class ProjectInfo extends Component {
 
         <h2 style={{float:"left"}}>{this.props.title}</h2>
 
-        <img src={require(`../images/${this.props.image.toLowerCase()}.png`)} className="Project-preview"  alt="logo" />
+        <img src={require(`../images/${this.props.image.toLowerCase()}.png`)} className={this.state.previewClass}  onClick={this.showDetail} alt="logo" />
+        <h2 className={this.state.detailClass} onClick={this.showDetail}>{this.props.detail}</h2>
         <h2 className="">{this.props.tech}</h2>
       </div>
     );

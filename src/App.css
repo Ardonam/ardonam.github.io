@@ -57,9 +57,9 @@ overflow: hidden;
   /* animation: fillChange 1s infinite ease both; */
 }
 
-.App-nav-icon:hover {
+/* .App-nav-icon:hover {
   animation: fillChange .5s forwards;
-}
+} */
 
 .App-nav-icon.click {
   fill: #00D0FE;

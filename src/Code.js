@@ -21,25 +21,25 @@ class Code extends Component {
           image: "mngo",
           title: "Mngo",
           tech: "React.js, Node.js",
-          likes: 4
+          detail: "Two person project to give smaller dining restaurants the online presence to compete with larger chanins currently at 20% project completion"
         },
         {
           image: "ls",
           title: "LiteSys Inc.",
           tech: "Javascript",
-          likes: 4
+          detail: "A solo project modernizing and adding mobile support for litesys.com while keeping the content the same"
         },
         {
-          image: "lsk",
+          image: "emb",
           title: "Touchscreen handheld controller",
           tech: "Custom Linux 4.4 kernel, Python",
-          likes: 2
+          detail: "Embeded device based on Texas Instruments Arm Cortex-A8 processor. As the sole software engeneer working in a multidiplinarry team, my responsibilities consisted of hardware device tree, drivers, u-boot configuration, kernel initialization and configuration, application develpment, automationed testing and deployment"
         },
         {
           image: "myworld",
           title: "3D interactive desktop application",
           tech: "OpenGL, C++",
-          likes: 4
+          detail: "Final project for CSCI441. A small mincraft like world with floating view navigation, the sheep can be multiplied made larger or even add multiple heads to each sheep"
         }
       ]
 
@@ -60,9 +60,9 @@ class Code extends Component {
         {/*<h1 className="App-title">Wellocme to my portfolio</h1>*/}
 
         <h1 id={this.props.id} className="Code-title" >PROJECTS</h1>
-        
+
         {this.state.projects.map((pInfo, index) => (
-          <ProjectInfo image={pInfo.image} title={pInfo.title} tech={pInfo.tech}/>
+          <ProjectInfo image={pInfo.image} title={pInfo.title} tech={pInfo.tech} detail={pInfo.detail}/>
 
         ))}
 

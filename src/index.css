@@ -84,7 +84,7 @@ h2 {
     -moz-filter: blur(10px);
     -o-filter: blur(10px);
     -ms-filter: blur(10px);
-    /* filter: brightness(70%)blur(5px); */
+    filter: blur(10px);
 
   }
 }
@@ -95,7 +95,7 @@ h2 {
     -moz-filter: blur(0px);
     -o-filter: blur(0px);
     -ms-filter: blur(0px);
-    /* filter: brightness(70%)blur(5px); */
+    filter: blur(0px);
 
   }
 }

@@ -22,7 +22,50 @@
   /* opacity: 1; */
 }
 
+.Project-details {
+  cursor: pointer;
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  opacity: 0;
+}
+
+.Project-details.show {
+  -webkit-animation: show 1s both;
+  -moz-animation: show 1s both;
+  -ms-animation: show 1s both;
+  -o-animation: show 1s both;
+  animation: show 1s both;
+}
+
 .Project-preview {
   max-width: 100%;
+  cursor: pointer;
+}
 
+.Project-preview.hide {
+  -webkit-animation: hide 2s both;
+  -moz-animation: hide 2s both;
+  -ms-animation: hide 2s both;
+  -o-animation: hide 2s both;
+  animation: hide 2s both;
+}
+
+@keyframes show {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  100% {
+    -webkit-filter: brightness(50%);
+    -moz-filter: brightness(50%);
+    -o-filter: brightness(50%);
+    -ms-filter: brightness(50%);
+    filter: brightness(50%);
+  }
 }
