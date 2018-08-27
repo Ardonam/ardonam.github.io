@@ -25,7 +25,7 @@ class Hobbies extends Component {
 
         <h1 id={this.props.id} className="Hobbies-title" >HOBBIES</h1>
         <div className="Hobbies-pic-container">
-        <h2 className="" >Member of the Montata State University Symphoney Orchestra for thee years</h2>
+        <h2 className="" >Member of the Montata State University Symphoney Orchestra 2012 - 2014</h2>
         <img src={require(`./images/msu.jpg`)} className="Hobbies-pic"  alt="Symphoney orchestra" />
         </div>
         <h2 className="" ><br/>Most resent work</h2>

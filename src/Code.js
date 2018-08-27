@@ -39,7 +39,7 @@ class Code extends Component {
           image: "myworld",
           title: "3D interactive desktop application",
           tech: "OpenGL, C++",
-          detail: "Final project for CSCI441. A small mincraft like world with floating view navigation, the sheep can be multiplied made larger or even add multiple heads to each sheep"
+          detail: "Final project for CSCI441. A small minecraft like world with floating view navigation, the sheep can be multiplied made larger or even add multiple heads to each sheep"
         }
       ]
 
