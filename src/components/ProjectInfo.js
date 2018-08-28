@@ -6,7 +6,7 @@ class ProjectInfo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      detailClass: "Project-details",
+      detailClass: "Project-details size-small size-medium",
       previewClass: "Project-preview"
     };
 
