@@ -1,9 +1,4 @@
 import React, { Component } from 'react';
-import ProjectInfo from './components/ProjectInfo';
-import graphics from './images/myworld.png';
-import litesys from './images/ls.png';
-import mngo from './images/mngo.png';
-import kpc3 from './images/lsk.png';
 import YouTube from 'react-youtube';
 import './App.css';
 import './Hobbies.css';
@@ -32,7 +27,6 @@ class Hobbies extends Component {
         <div className="Hobbies-pic-container">
         <YouTube
           videoId="VJkl671jbds"
-
           className="Hobbies-pic"
           onReady={this._onReady}
         />

@@ -1,9 +1,4 @@
 import React, { Component } from 'react';
-import ProjectInfo from './components/ProjectInfo';
-import graphics from './images/myworld.png';
-import litesys from './images/ls.png';
-import mngo from './images/mngo.png';
-import kpc3 from './images/lsk.png';
 import './App.css';
 import './Info.css';
 

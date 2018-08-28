@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import ProjectInfo from './components/ProjectInfo';
-import graphics from './images/myworld.png';
-import litesys from './images/ls.png';
-import mngo from './images/mngo.png';
-import kpc3 from './images/lsk.png';
 import './App.css';
 import './Code.css';
 
@@ -21,7 +17,7 @@ class Code extends Component {
           image: "mngo",
           title: "Mngo",
           tech: "React.js, Node.js",
-          detail: "Two person project to give smaller dining restaurants the online presence to compete with larger chanins currently at 20% project completion"
+          detail: "A two person project to give smaller dining restaurants the online presence to compete with larger chanins. Currently at 20% project completion"
         },
         {
           image: "ls",
@@ -33,13 +29,13 @@ class Code extends Component {
           image: "emb",
           title: "Touchscreen handheld controller",
           tech: "Custom Linux 4.4 kernel, Python",
-          detail: "Embeded device based on Texas Instruments Arm Cortex-A8 processor. As the sole software engeneer working in a multidiplinarry team, my responsibilities consisted of hardware device tree, drivers, u-boot configuration, kernel initialization and configuration, application develpment, automationed testing and deployment"
+          detail: "Embeded device based on Texas Instruments Arm Cortex-A8 processor. As the sole software engeneer working in a multidiplinarry team, my responsibilities consisted of the hardware device tree, drivers, u-boot configuration, kernel initialization and configuration, application develpment, automationed testing and deployment"
         },
         {
           image: "myworld",
           title: "3D interactive desktop application",
           tech: "OpenGL, C++",
-          detail: "Final project for CSCI441. A small minecraft like world with floating view navigation, the sheep can be multiplied made larger or even add multiple heads to each sheep"
+          detail: "Final project for CSCI441. A small Minecraft like world with floating view navigation, the sheep can be multiplied made larger or even add multiple heads to each sheep"
         }
       ]
 

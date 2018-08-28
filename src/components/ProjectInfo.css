@@ -25,7 +25,7 @@
 .Project-details {
   cursor: pointer;
   position: absolute;
-  width: 80%;
+  width: 70%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -54,6 +54,29 @@
   animation: hide 2s both;
 }
 
+@media (min-width:993px)
+{
+  .w3-hide-large{
+    display:none!important
+  }
+}
+@media (max-width:700px) and (min-width:501px)
+{
+  .size-medium{
+    width: 85%;
+    font-size: 18px;
+    /* display:none!important */
+  }
+}
+
+@media (max-width:500px){
+  .size-small{
+    width: 100%;
+    font-size: 15px;
+    /* display:none!important */
+  }
+}
+
 @keyframes show {
   100% {
     opacity: 1;
@@ -62,10 +85,10 @@
 
 @keyframes hide {
   100% {
-    -webkit-filter: brightness(50%);
-    -moz-filter: brightness(50%);
-    -o-filter: brightness(50%);
-    -ms-filter: brightness(50%);
-    filter: brightness(50%);
+    -webkit-filter: brightness(40%);
+    -moz-filter: brightness(40%);
+    -o-filter: brightness(40%);
+    -ms-filter: brightness(40%);
+    filter: brightness(40%);
   }
 }

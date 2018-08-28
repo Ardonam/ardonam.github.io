@@ -1,9 +1,4 @@
 import React, { Component } from 'react';
-
-import graphics from '../images/myworld.png';
-import litesys from '../images/ls.png';
-import mngo from '../images/mngo.png';
-import kpc3 from '../images/lsk.png';
 import './ProjectInfo.css'
 
 
@@ -20,12 +15,12 @@ class ProjectInfo extends Component {
     this.showDetail = this.showDetail.bind(this);
   }
   showDetail() {
-    if(this.state.detailClass == "Project-details"){
-      this.setState({ detailClass: "Project-details show" });
+    if(this.state.detailClass === "Project-details size-small size-medium"){
+      this.setState({ detailClass: "Project-details size-small size-medium show" });
       this.setState({ previewClass: "Project-preview hide" });
     }
     else{
-      this.setState({ detailClass: "Project-details" });
+      this.setState({ detailClass: "Project-details size-small size-medium" });
       this.setState({ previewClass: "Project-preview" });
     }
 

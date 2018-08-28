@@ -1,11 +1,10 @@
-import React, { Component, Button } from 'react';
+import React, { Component } from 'react';
 import IconCircle from './icons/IconCircle';
 import IconCode from './icons/IconCode';
 import IconAbout from './icons/IconAbout';
 import IconMusic from './icons/IconMusic';
 import IconInfo from './icons/IconInfo';
 import navBar from './images/navBar.png';
-import logo from './logo.svg';
 import Code from './Code';
 import About from './About';
 import Hobbies from './Hobbies';
@@ -50,17 +49,17 @@ class App extends Component {
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
     document.getElementById("homeButton").classList.add("click")
-    if (this.props.location == "portfolio"){
+    if (this.props.location === "portfolio"){
       // document.getElementById("portfolio").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
       this.navPortfolio();
     }
-    else  if (this.props.location == "about"){
+    else  if (this.props.location === "about"){
       this.navAbout();
     }
-    else  if (this.props.location == "hobbies"){
+    else  if (this.props.location === "hobbies"){
       this.navMusic();
     }
-    else  if (this.props.location == "info"){
+    else  if (this.props.location === "info"){
       this.navInfo();
     }
     else {
@@ -137,9 +136,9 @@ class App extends Component {
         document.getElementById("homeButton").classList.remove("click")
 
       }
-      console.log(infoPos);
-      console.log(hp);
-      console.log("hello");
+      // console.log(infoPos);
+      // console.log(hp);
+      // console.log("hello");
 
   }
 
